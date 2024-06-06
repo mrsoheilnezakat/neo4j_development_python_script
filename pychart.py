@@ -16,7 +16,7 @@ class Neo4jConnection:
                 self.__uri, auth=(self.__user, self.__password)
             )
         except Exception as e:
-            print("Failed to create the driver:", e)
+            print("Failed to create driver:", e)
 
     def close(self):
         if self.__driver is not None:
