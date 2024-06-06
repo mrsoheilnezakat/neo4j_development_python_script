@@ -200,7 +200,7 @@ with driver.session() as session:
         number_of_assignment_of = result.single().value()
         print(number_of_assignment_of)
         if (number_of_assignment_of) == 45:
-            print(f"You entered: {number_of_assignment_of}")
+            print(f"You have entered: {number_of_assignment_of}")
             break
         result = session.run(
             "MATCH (a:Assignment {assignmentID: $assignment_id})  MATCH (n:Course {courseID: $course_id }) where a.semester=n.semester MERGE (a)-[:ASSIGNMENT_OF]->(n)",
